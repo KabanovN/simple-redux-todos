@@ -28,7 +28,7 @@ function App() {
             <ul className='todo__list'>
                 {todos.map((todo) => {
                     return (
-                        <li className='todo__item' key={todo.id} value={1}>
+                        <li className='todo__item' key={todo.id}>
                             <label>
                                 <input
                                     className='filled-in'
