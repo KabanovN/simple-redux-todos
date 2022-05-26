@@ -19,6 +19,7 @@ function App() {
                 }}>
                 <input
                     id='input_text'
+                    name='title'
                     ref={ref}
                     type='text'
                     placeholder='Например, новая задача'
@@ -33,7 +34,8 @@ function App() {
                                 <input
                                     className='filled-in'
                                     type='checkbox'
-                                    onClick={() =>
+                                    checked={todo.completed}
+                                    onChange={() =>
                                         dispatch(toggleTodo(todo.id))
                                     }
                                 />
