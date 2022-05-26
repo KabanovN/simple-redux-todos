@@ -6,7 +6,6 @@ function App() {
     const todos = useSelector((state) => state);
     const dispatch = useDispatch();
     const ref = useRef(null);
-    console.log(todos);
     return (
         <div className='container orange lighten-5 z-depth-3'>
             <h1 className='todo__title'>Список дел</h1>
