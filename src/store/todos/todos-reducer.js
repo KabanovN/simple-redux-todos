@@ -1,8 +1,10 @@
+import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from './todos-const';
+
 let initialId = 0;
 
-const reducer = (state = [], action) => {
+const todosReducer = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_TODO':
+        case ADD_TODO:
             return [
                 ...state,
                 {
@@ -11,9 +13,9 @@ const reducer = (state = [], action) => {
                     completed: false,
                 },
             ];
-        case 'REMOVE_TODO':
+        case REMOVE_TODO:
             return state.filter((item) => item.id !== action.id);
-        case 'TOGGLE_TODO':
+        case TOGGLE_TODO:
             return state.map((item) =>
                 item.id === action.id
                     ? { ...item, completed: !item.completed }
@@ -24,4 +26,4 @@ const reducer = (state = [], action) => {
     }
 };
 
-export default reducer;
+export default todosReducer;
